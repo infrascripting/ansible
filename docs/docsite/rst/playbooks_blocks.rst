@@ -87,8 +87,7 @@ Conditional Execution
 Blocks allow groups of tasks to be skipped based on a conditional test.
 
 .. code-block:: YAML
- :emphasize-lines: 2,6,10
- :caption: Block error handling example
+ :caption: Block conditional execution example
 
   tasks:
     - block:
