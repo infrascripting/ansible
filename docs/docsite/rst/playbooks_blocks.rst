@@ -80,6 +80,25 @@ Another example is how to run handlers after an error occurred :
     - name: run me even after an error
       debug: msg='this handler runs even on error'
 
+
+Conditional Execution
+`````````````````````
+
+Blocks allow groups of tasks to be skipped based on a conditional test.
+
+.. code-block:: YAML
+ :emphasize-lines: 2,6,10
+ :caption: Block error handling example
+
+  tasks:
+    - block:
+       - debug: var=msg
+         when: true
+       when: true
+
+
+Any and all of the tasks in the ``block`` would only be executed if the condition being tested was true.
+
 .. seealso::
 
    :doc:`playbooks`
